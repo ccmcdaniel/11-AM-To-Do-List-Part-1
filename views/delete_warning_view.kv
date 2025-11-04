@@ -13,17 +13,28 @@
         BodyBox:
             orientation: 'vertical'
 
-            Label:
+            Widget: 
+
+            DeleteWarningLabel:
                 text: "Are you sure you want to delete?"
+
+                size_hint: (1, None)
+                height: 312
+            
+            Widget:
 
         FooterBox:
             orientation: 'horizontal'
 
-            Button:
+            DeleteButton:
                 text: 'Delete'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 on_press: app.root.current = "master_list"
+
+            Widget: 
 
             Button:
                 text: 'Cancel'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 on_press: app.root.current = "edit_task"
         

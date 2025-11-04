@@ -25,6 +25,22 @@
             pos: self.pos
             radius: [15]
 
+<DeleteWarningLabel@Label>:
+    font_size: '48sp'
+    halign: 'center'
+    valign: 'middle'
+    text_size: self.size
+
+
+    canvas.before:
+        Color:
+            rgba: hex("#9F7A7A")
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [61]
+
 <DeleteButton@Button>:
     canvas.before: 
         Color:

@@ -8,25 +8,31 @@
             orientation: 'vertical'
 
             TitleLabel:
-                text: "Add New Task View"
+                text: "Edit Task"
 
         BodyBox:
             orientation: 'vertical'
 
-            TextInput:
+            TaskViewTitle:
                 hint_text: 'Title'
 
-            TextInput:
+            TaskViewDesc:
                 hint_text: "Description"
+
+            Widget:
 
         FooterBox:
             orientation: 'horizontal'
 
-            Button:
+            SaveButton:
                 text: 'Save'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 on_press: app.root.current = "master_list"
+
+            Widget:
 
             Button:
                 text: 'Cancel'
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 on_press: app.root.current = "master_list"
         
