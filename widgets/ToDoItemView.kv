@@ -8,6 +8,8 @@
     size_hint: (1, None)
     height: 100
 
+    padding: 5
+
     canvas.before:
         Color:
             rgba: hex("#F2F2F2")
@@ -29,7 +31,7 @@
 
             canvas.before:
                 Color:
-                    rgba: (0.9, 0.6, 0.6, 1)
+                    rgba: root.completed_ind_color
 
                 Rectangle:
                     size: self.size
@@ -39,17 +41,19 @@
         orientation: 'vertical'
 
         Label:
-            text: "<to do task title>"
+            text: root.title
             halign: 'left'
             text_size: self.size
             font_size: '30sp'
             color: (0, 0, 0, 1)
+
         Label:
-            text: "<is completed?>"
+            text: root.completed
             halign: 'right'
             text_size: self.size
             font_size: '15sp'
             color: (0, 0, 0, 1)
+            font_style: 'italics'
 
 
 

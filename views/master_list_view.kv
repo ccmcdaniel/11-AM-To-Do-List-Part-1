@@ -1,4 +1,5 @@
 #:kivy 1.0
+#:import hex kivy.utils.get_color_from_hex
 
 <MasterListView>:
     BoxLayout:
@@ -15,11 +16,25 @@
 
 
             ToDoItemView:
-            ToDoItemView:
-            ToDoItemView:
-            ToDoItemView:
+                title: "Wash the Dishes"
+                completed: "Not Completed"
 
-            BoxLayout:
+            ToDoItemView:
+                title: "Take out Trash"
+                completed: "Completed at 11:59 AM on 10/29/2025"
+                completed_ind_color: hex("#92DDA2")
+                
+            ToDoItemView:
+                title: "Clean your Room"
+                completed: "Not Completed"
+                
+            ToDoItemView:
+                title: "Do the Laundry"
+                completed: "Completed at 2:30 PM on 10/25/2025 "
+                completed_ind_color: hex("#92DDA2")
+                
+
+            Widget:
 
         FooterBox:
             orientation: 'horizontal'
