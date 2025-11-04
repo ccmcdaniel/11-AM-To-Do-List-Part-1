@@ -13,8 +13,11 @@ class ToDoItemView(BoxLayout):
     completed = StringProperty("<completed_placeholder>")    
     completed_ind_color = ColorProperty(hex("#DD9292"))
 
-    # Code to make ToDoItem clickable (so the user can click on an item to open it)
-    
+    '''
+    ************************************************************************************************************
+    Code to make ToDoItem clickable (so the user can click on an item to open it)
+    ************************************************************************************************************
+    '''
     # Define a custom color property for visual feedback
     background_color = ColorProperty(hex(background_color_normal))
 
@@ -45,6 +48,7 @@ class ToDoItemView(BoxLayout):
             
             # Block further touch processing by other widgets below it
             return True
+        
         return super().on_touch_down(touch)
 
     def on_touch_up(self, touch):

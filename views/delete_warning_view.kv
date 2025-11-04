@@ -29,12 +29,12 @@
             DeleteButton:
                 text: 'Delete'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                on_press: app.root.current = "master_list"
+                on_release: app.root.current = "master_list"
 
             Widget: 
 
             Button:
                 text: 'Cancel'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                on_press: app.root.current = "edit_task"
+                on_release: app.root.current = "edit_task"
         
