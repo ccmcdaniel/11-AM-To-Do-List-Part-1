@@ -10,24 +10,35 @@
             TitleLabel:
                 text: "Edit Task"
 
-        BoxLayout:
+        BodyBox:
             orientation: 'vertical'
 
-            TextInput:
+            TaskViewTitle:
                 hint_text: 'Title'
 
-            TextInput:
+            TaskViewDesc:
                 hint_text: "Description"
 
-            Button:
-                text: 'Delete'
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint: (1, None)
+                height: 60
+                padding: (0, 11, 0, 11)
 
-                on_press: app.root.current = "delete_warning"
+                Widget:
+                
+                DeleteButton:
+                    text: 'Delete'
+                    on_press: app.root.current = "delete_warning"
+
+                Widget:
+
+            Widget:
 
         FooterBox:
             orientation: 'horizontal'
 
-            Button:
+            SaveButton:
                 text: 'Save'
                 on_press: app.root.current = "master_list"
 

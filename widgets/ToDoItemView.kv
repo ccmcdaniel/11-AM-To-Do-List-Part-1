@@ -1,5 +1,7 @@
 #:kivy 1.0
 
+#:import hex kivy.utils.get_color_from_hex
+
 <ToDoItemView>:
     orientation: 'horizontal'
 
@@ -8,7 +10,7 @@
 
     canvas.before:
         Color:
-            rgba: (0.8, 0.8, 0.8, 1)
+            rgba: hex("#F2F2F2")
 
         Rectangle:
             pos: self.pos

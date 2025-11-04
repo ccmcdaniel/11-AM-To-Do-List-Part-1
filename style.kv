@@ -25,6 +25,37 @@
             pos: self.pos
             radius: [15]
 
+<DeleteButton@Button>:
+    canvas.before: 
+        Color:
+            rgba: hex("#820000") if self.state == 'normal' else hex("#A20000")
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [15]
+
+<SaveButton@Button>:
+    canvas.before: 
+        Color:
+            rgba: hex("#009717") if self.state == 'normal' else hex("#00db21ff")
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [15]
+
+
+<TaskViewTitle@TextInput>:
+    size_hint: (1, None)
+    height: 74
+    font_size: '32sp'
+
+<TaskViewDesc@TextInput>:
+    size_hint: (1, None)
+    height: 226
+    font_size: '32sp'
+
 
 <TitleLabel@Label>:
     font_size: '35sp'
@@ -58,6 +89,9 @@
             pos: self.pos
 
 <BodyBox@BoxLayout>:
+    padding: 20
+    spacing: 10
+
     canvas.before:
         Color: 
             rgba: hex("#FFFFFF")
