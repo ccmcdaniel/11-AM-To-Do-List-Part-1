@@ -4,24 +4,39 @@
     BoxLayout:
         orientation: 'vertical'
 
-        TitleBox:
+        HeaderBox:
             orientation: 'vertical'
 
             TitleLabel:
                 text: "To Do List"
 
-        BoxLayout:
+        BodyBox:
             orientation: 'vertical'
+            padding: 20
+            spacing: 10
 
             ToDoItemView:
             ToDoItemView:
             ToDoItemView:
             ToDoItemView:
+
+            BoxLayout:
 
         FooterBox:
             orientation: 'horizontal'
+
+            # Empty Widget to fill up space.  Used to center the 
+            # "new" button by filling in the left-hand space.
+
+            Widget:
+                size_hint: (0.25, 1)
 
             Button:
                 text: 'New'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
                 on_release: app.root.current = "edit_task"
+
+            # Empty Widget to fill up space.  Used to center the 
+            # "new" button by filling in the right-hand space.
+            Widget:
+                size_hint: (0.25, 1)
