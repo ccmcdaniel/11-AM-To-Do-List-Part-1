@@ -18,20 +18,24 @@
             ToDoItemView:
                 title: "Wash the Dishes"
                 completed: "Not Completed"
+                on_release: app.root.current = "edit_task"
 
             ToDoItemView:
                 title: "Take out Trash"
                 completed: "Completed at 11:59 AM on 10/29/2025"
                 completed_ind_color: hex("#92DDA2")
+                on_release: app.root.current = "edit_task"
                 
             ToDoItemView:
                 title: "Clean your Room"
                 completed: "Not Completed"
+                on_release: app.root.current = "edit_task"
                 
             ToDoItemView:
                 title: "Do the Laundry"
                 completed: "Completed at 2:30 PM on 10/25/2025 "
                 completed_ind_color: hex("#92DDA2")
+                on_release: app.root.current = "edit_task"
                 
 
             Widget:
@@ -48,7 +52,7 @@
             Button:
                 text: 'New'
                 pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                on_release: app.root.current = "edit_task"
+                on_release: app.root.current = "add_new_task"
 
             # Empty Widget to fill up space.  Used to center the 
             # "new" button by filling in the right-hand space.
