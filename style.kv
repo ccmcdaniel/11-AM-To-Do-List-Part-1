@@ -1,0 +1,46 @@
+#:kivy 1.0
+
+<Button>:
+    font_size: '25sp'
+    color: (0, 0, 0, 1)
+
+    background_normal: ''
+    background_down: ''
+    background_color: (0, 0, 0, 0)
+
+    size_hint: (None, None)
+    width: 240
+    height: 100
+
+    canvas.before: 
+        Color:
+            rgba: (1, 1, 1, 1) if self.state == 'normal' else (0.8, 0.8, 0.8, 1)
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [15]
+
+
+<TitleLabel@Label>:
+    font_size: '35sp'
+    color: (0, 0, 0, 1)
+
+    canvas.before:
+        Color: 
+            rgba: (0.6, 0.6, 0.6, 1)
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<TitleBox@BoxLayout>:
+    size_hint: (1, None)
+    height: 100
+
+<FooterBox@BoxLayout>:
+    size_hint: (1, None)
+    height: 140
+
+    padding: 20
+    spacing: 10

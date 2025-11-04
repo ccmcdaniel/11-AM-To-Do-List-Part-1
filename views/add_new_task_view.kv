@@ -1,0 +1,32 @@
+#:kivy 1.0
+
+<AddNewTaskView>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: "Add New Task View"
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            TextInput:
+                hint_text: 'Title'
+
+            TextInput:
+                hint_text: "Description"
+
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Button:
+                text: 'Save'
+                on_press: app.root.current = "master_list"
+
+            Button:
+                text: 'Cancel'
+                on_press: app.root.current = "master_list"
+        

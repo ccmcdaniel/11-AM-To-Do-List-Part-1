@@ -1,0 +1,29 @@
+#:kivy 1.0
+
+<DeleteWarningView>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: "Delete Task"
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+                text: "Are you sure you want to delete?"
+
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Button:
+                text: 'Delete'
+                on_press: app.root.current = "master_list"
+
+            Button:
+                text: 'Cancel'
+                on_press: app.root.current = "edit_task"
+        

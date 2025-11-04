@@ -1,0 +1,37 @@
+#:kivy 1.0
+
+<EditTaskView>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        TitleBox:
+            orientation: 'vertical'
+
+            TitleLabel:
+                text: "Edit Task"
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            TextInput:
+                hint_text: 'Title'
+
+            TextInput:
+                hint_text: "Description"
+
+            Button:
+                text: 'Delete'
+
+                on_press: app.root.current = "delete_warning"
+
+        FooterBox:
+            orientation: 'horizontal'
+
+            Button:
+                text: 'Save'
+                on_press: app.root.current = "master_list"
+
+            Button:
+                text: 'Cancel'
+                on_press: app.root.current = "master_list"
+        
